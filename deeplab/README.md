@@ -1,23 +1,4 @@
-# Semantic Segmentation of Soybean Leaves
-This project uses Deeplab version 3+ to semantically segment images of soybean leaves. The project was modified to allow the custom dataset using a partially trained model as the initialization.  
-
-The dataset consists of a set of images with corresponding masks. These images show soybean leaves growing against a brown dirt background. The goal is to segment out each leaf to determine the percentage of crop coverage in the image. 
-
-## Dataset conversion
-In the datasets folder, the build_soybean_data.py script can be used to convert the images to the tfrecord needed for the tensorflow model. 
-The dataset meta information, was included into the segmentation_dataset.py script in the datasets directory, needs to be included into the segmentation_dataset.py script. 
-
-## Train Model
-The t_run.sh script run the training of the model based on the initial checkpoint. I started the model training with the 'deeplabv3_pascal_train_aug' initialization model provided by the deeplab team. 
-
-*   <a href='g3doc/model_zoo.md'>Checkpoints and frozen inference graphs.</a><br>
-
-## Validate and Visualize
-The run_vis.sh and run_val.sh run the visualization and validation of the saved model checkpoints.
-
-
-# Original README from Tensorflow
-## DeepLab: Deep Labelling for Semantic Image Segmentation
+# DeepLab: Deep Labelling for Semantic Image Segmentation
 
 DeepLab is a state-of-art deep learning model for semantic image segmentation,
 where the goal is to assign semantic labels (e.g., person, dog, cat and so on)
