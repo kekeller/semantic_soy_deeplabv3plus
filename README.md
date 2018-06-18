@@ -7,10 +7,19 @@ The dataset consists of a set of images with corresponding masks. These images s
 In the datasets folder, the build_soybean_data.py script can be used to convert the images to the tfrecord needed for the tensorflow model. 
 The dataset meta information, was included into the segmentation_dataset.py script in the datasets directory, needs to be included into the segmentation_dataset.py script. 
 
-## Train Model
-The t_run.sh script run the training of the model based on the initial checkpoint. I started the model training with the 'deeplabv3_pascal_train_aug' initialization model provided by the deeplab team. 
+## Slim TF Library
+Before the model can be trained, the tensorflow slim library needs to be added. 
 
-*   <a href='g3doc/model_zoo.md'>Checkpoints and frozen inference graphs.</a><br>
+In the main directory (not the deeplab folder), run this to export the library to the python path: 
+
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+
+## Train Model
+The run_train.sh script run the training of the model based on the initial checkpoint. I started the model training with the 'deeplabv3_pascal_train_aug' initialization model provided by the deeplab team. 
+
+*   <a href='deeplab/g3doc/model_zoo.md'>Checkpoints and frozen inference graphs.</a><br>
+
+For running on a cluster, the cluster-run.sh script submits the training script to a bsf queue for processing. This was used on the ETHZ Leonhard GPU cluster. 
 
 ## Validate and Visualize
 The run_vis.sh and run_val.sh run the visualization and validation of the saved model checkpoints.
@@ -87,9 +96,9 @@ the code.
 
 Some segmentation results on Flickr images:
 <p align="center">
-    <img src="g3doc/img/vis1.png" width=600></br>
-    <img src="g3doc/img/vis2.png" width=600></br>
-    <img src="g3doc/img/vis3.png" width=600></br>
+    <img src="deeplab/g3doc/img/vis1.png" width=600></br>
+    <img src="deeplab/g3doc/img/vis2.png" width=600></br>
+    <img src="deeplab/g3doc/img/vis3.png" width=600></br>
 </p>
 
 ## Contacts (Maintainers)

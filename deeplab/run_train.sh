@@ -5,7 +5,6 @@ DATASET="./datasets/tfrecord"
 
 TRAIN_LOGDIR="./datasets/exp/train"
 
-CKPT="./xception_65/model.ckpt"
 CKPT="./deeplabv3_pascal_train_aug/model.ckpt"
 
 # Train 10 iterations.
