@@ -1,3 +1,10 @@
+# Extra files
+*.tfrecord
+*.jpg
+*.png
+*.tif
+*.tiff
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
