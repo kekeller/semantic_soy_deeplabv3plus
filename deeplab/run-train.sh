@@ -7,7 +7,6 @@ TRAIN_LOGDIR="./datasets/exp/train"
 
 CKPT="./deeplabv3_pascal_train_aug/model.ckpt"
 
-# Train 10 iterations.
 NUM_ITERATIONS=3000
 
 python train.py \
