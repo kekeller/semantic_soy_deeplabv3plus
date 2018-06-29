@@ -1,5 +1,4 @@
-#!bin/bash
-
+#!/bin/bash
 
 # Copy locally the trained checkpoint as the initial checkpoint.
 TF_INIT_ROOT="http://download.tensorflow.org/models"

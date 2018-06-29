@@ -80,8 +80,8 @@ DatasetDescriptor = collections.namedtuple(
 
 _SOYBEAN_INFORMATION = DatasetDescriptor(
     splits_to_sizes={
-        'train': 960,
-        'val': 180,
+        'train': 240,    #960,
+        'val': 45,   #180,
     },
     num_classes=2,
     ignore_label=255,
