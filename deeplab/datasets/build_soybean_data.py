@@ -63,14 +63,14 @@ def _convert_dataset(dataset_split):
   filenames = [x.strip('\n') for x in open(dataset_split, 'r')]
   num_images = len(filenames)
 
-  print(num_images)
+  print(filenames)
 
-  FLAGS.image_format = "jpg"
+  FLAGS.image_format = "png"
   FLAGS.label_format = "png"
 
   num_per_shard = int(math.ceil(num_images / float(_NUM_SHARDS)))
 
-  image_reader = build_data.ImageReader('jpg', channels=3)
+  image_reader = build_data.ImageReader('png', channels=3)
   label_reader = build_data.ImageReader('png', channels=1)
 
   for shard_id in range(_NUM_SHARDS):
